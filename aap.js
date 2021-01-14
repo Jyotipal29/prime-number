@@ -1,7 +1,10 @@
 var userInput = document.querySelector("#input");
+var userInput2 = document.querySelector("#input2");
+
 var outputDiv = document.querySelector("#output");
 var btn = document.querySelector("#button");
  var maxDate = 31;
+ var maxMonth = 12;
 function checkPrime(input){
     var isPrime = true;
 var number =parseInt(input);
@@ -24,13 +27,20 @@ var number =parseInt(input);
 }
 
 function clickEventHandler(){
-    var input  = userInput.value;
-    if(input == ""){
-        outputDiv.innerHTML = "please enter your birth-date";
-    } else if(input == 1){
-        outputDiv.innerHTML = "1 is niether prime nor compossite";
-    } 
+    var date = userInput.value;
+    var month = userInput2.value;
+    var input = date + month;
+   if(input == ""){
+       outputDiv.innerHTML = "please enter your birth date and month";
+   } else if(isNaN(date) || isNaN(month)){
+       outputDiv.innerHTML = "Please enter number only ";
+   } else if(input == 1){
+       outputDiv.innerHTML =" its niether prime nor composite number";
+   } else if(date>maxDate || month>maxMonth){
+       outputDiv.innerHTML =`date should not exceed ${maxDate} month should not exceed ${maxMonth}`;
+   } else{
     checkPrime(input)
+   }
 }
 
 btn.addEventListener("click",clickEventHandler)

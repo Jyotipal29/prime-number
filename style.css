@@ -8,7 +8,7 @@ background-size: cover;
 
 .container{
     max-width: 400px;
-    height: 60vh;
+    height: 80vh;
     margin: auto;
     text-align: center;
     background-color: rgb(191, 205, 216);
@@ -20,9 +20,9 @@ background-size: cover;
 h1{
     padding:1rem;
 }
-#input{
+#input , #input2{
     width: 40vh;
-    height: 10vh;
+    height: 7vh;
     color:black;
     text-align: center;
     border: 2px solid rgba(25, 25, 150, .5);
@@ -31,6 +31,9 @@ h1{
     font-weight: bold;
 }
 
+#input2{
+    margin:1rem;
+}
 
 #button{
     width: 40vh;
